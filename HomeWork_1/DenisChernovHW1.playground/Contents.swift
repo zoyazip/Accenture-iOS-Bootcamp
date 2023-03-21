@@ -79,7 +79,7 @@ let birthDay = 25;
 let now = Date.now;
 let myCalendar = Calendar.current;
 
-let stringDate = "1999-03-25";
+let stringDate = "\(birthYear)-\(birthMonth)-\(birthDay)";
 let dateFormatter = DateFormatter();
 dateFormatter.dateFormat = "yyyy-MM-dd";
 
