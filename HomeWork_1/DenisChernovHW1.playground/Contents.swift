@@ -66,6 +66,8 @@ let halfP = p/2;
 
 let s = sqrt(halfP * (halfP - AB) * (halfP - AC) * (halfP - CB));
 
+print("AB - \(AB), Perimeter = \(p), Area = \(s)");
+
 /*
  Ex5:
  Calculate the number of years, months, days from you birthday to current date.
