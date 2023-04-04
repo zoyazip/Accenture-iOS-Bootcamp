@@ -31,29 +31,32 @@ class ThemeViewController: UIViewController {
     
     func darkThemeIsOn(isOn: Bool){
         
+        var btnTextColor = UIColor.black;
+        var titleColor = UIColor.black;
+        var viewBackgroundColor = UIColor.white;
+        
         if(!isOn){
             mainText = "Dark Theme on"
             
-            darkThemeButton.setTitleColor(UIColor.white, for: .normal)
-            
-            navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.red]
-            
-            view.backgroundColor = UIColor.black
+            btnTextColor = UIColor.white;
+            titleColor = UIColor.red;
+            viewBackgroundColor = UIColor.black;
             
             darkIsOn = true;
         }
         else{
-            mainText = "Dark Theme off"
+            mainText = "Dark Theme off";
             
-            darkThemeButton.setTitleColor(UIColor.black, for: .normal)
-            
-            navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
-            
-            view.backgroundColor = UIColor.white
+            btnTextColor = UIColor.black;
+            titleColor = UIColor.black;
+            viewBackgroundColor = UIColor.white;
             
             darkIsOn = false;
         }
         
+        darkThemeButton.setTitleColor(btnTextColor, for: .normal)
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: titleColor]
+        view.backgroundColor = viewBackgroundColor
         darkThemeButton.setTitle(mainText, for: .normal)
         navigationItem.title = mainText
     }
